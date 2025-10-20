@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contacto | Parchados</title>
+  <style>
+    :root { --sun-1:#FA5D1E;  --sun-4:#B03725; --muted:#666; --bg:#fff; --max-width:980px; }
+    body{font-family:"Poppins",sans-serif;background:var(--bg);color:#111;margin:0;}
+    header{text-align:center;padding:24px 0;background:linear-gradient(135deg,var(--sun-1),var(--sun-3));}
+    header img{width:170px;}
+    main{max-width:var(--max-width);margin:0px auto;padding:20px;}
+    h1{color:var(--sun-1);text-align:center;}
+    p,li{color:var(--muted);line-height:1.6;}
+    form{display:flex;flex-direction:column;gap:12px;max-width:400px;margin:20px auto;}
+    input,textarea,button{padding:10px;border-radius:8px;border:1px solid #ccc;font-size:1rem;}
+    button{background:var(--sun-1);color:#fff;border:none;cursor:pointer;transition:.3s;}
+    button:hover{background:var(--sun-3);}
+  </style>
+</head>
+<body>
+  <header>
+    <a href="index.html"><img src="img/logo.png" alt="Parchados Logo"></a>
+  </header>
+  <main>
+    <h1>Contacto</h1>
+    <p>¿Tienes alguna pregunta o comentario? Escríbenos y te responderemos lo antes posible.</p>
+    <form action="mailto:holaparchados@gmail.com" method="post" enctype="text/plain">
+      <input type="text" name="nombre" placeholder="Tu nombre" required>
+      <input type="email" name="email" placeholder="Tu correo" required>
+      <textarea name="mensaje" rows="5" placeholder="Escribe tu mensaje aquí..." required></textarea>
+      <button type="submit">Enviar mensaje</button>
+    </form>
+    <p style="text-align:center;">📍 Bogotá D.C. | 📩 holaparchados@gmail.com</p>
+  </main>
+</body>
+</html>

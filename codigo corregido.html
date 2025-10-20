@@ -1,28 +1,16 @@
 <!doctype html>
 <html lang="es">
 <head>
-<meta charset="utf-8" />
-<meta name="viewport" content="width=device-width,initial-scale=1" />
-<title>Bastón Trekking • Parchados</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Bastón Trekking • Parchados</title>
 
-<!-- 🔍 Descripción SEO -->
-<meta name="description" content="Bastón trekking con linterna LED, brújula y sistema anti-shock. Compra segura y envío incluido con Parchados.">
-
-<!-- 📱 Open Graph (para compartir en redes) -->
-<meta property="og:title" content="Bastón Trekking • Parchados">
-<meta property="og:description" content="Camina seguro, incluso de noche. Oferta limitada con envío incluido.">
-<meta property="og:image" content="https://parchadosbogota.github.io/Baston-Trekking/img/ventabaston.jpg">
-<meta property="og:type" content="product">
-<meta property="og:url" content="https://parchadosbogota.github.io/Baston-Trekking/">
-<meta property="og:image:width" content="1200">
-<meta property="og:image:height" content="630">
-
-<!-- 🐦 Twitter Card -->
-<meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Bastón Trekking • Parchados">
-<meta name="twitter:description" content="Camina seguro, incluso de noche. Oferta limitada con envío incluido.">
-<meta name="twitter:image" content="https://parchadosbogota.github.io/Baston-Trekking/img/ventabaston.jpg">
-
+  <meta name="description" content="Bastón trekking con linterna LED, brújula y sistema anti-shock. Compra segura y envío incluido con Parchados.">
+  <meta property="og:title" content="Bastón Trekking • Parchados">
+  <meta property="og:description" content="Camina seguro, incluso de noche. Oferta limitada con envío incluido.">
+  <meta property="og:image" content="https://tusitio.com/img/product.jpg">
+  <meta property="og:type" content="product">
+  <meta property="og:url" content="https://tusitio.com/">
 
   <!-- Google Font -->
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
@@ -139,15 +127,7 @@
       border: 0;
       font-weight: 700;
       cursor: pointer;
-      box-shadow: 0 8px 22px rgba(122, 28, 23, 0.18);
-      /* Add transition for hover effect */
-      transition: background 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
-    }
-
-    .btn-primary:hover {
-      background: var(--sun-4); /* Darken a bit on hover */
-      transform: translateY(-2px); /* Slight lift effect */
-      box-shadow: 0 10px 25px rgba(122, 28, 23, 0.25); /* Enhanced shadow */
+      box-shadow: 0 8px 22px rgba(122, 28, 23, 0.18)
     }
 
     .btn-outline {
@@ -156,13 +136,7 @@
       padding: 10px 12px;
       border-radius: 12px;
       border: 2px solid rgba(255, 255, 255, 0.16);
-      cursor: pointer;
-      transition: background 0.3s ease, border-color 0.3s ease;
-    }
-
-    .btn-outline:hover {
-      background: rgba(255, 255, 255, 0.1);
-      border-color: rgba(255, 255, 255, 0.25);
+      cursor: pointer
     }
 
     .countdown {
@@ -743,7 +717,7 @@
       margin-top: 20px;
     }
 
-    #showMoreBtn, #showLessBtn { /* Apply styles to both show/hide buttons */
+    #showMoreBtn {
       background: linear-gradient(90deg, var(--sun-1), var(--sun-2));
       color: #fff;
       border: none;
@@ -752,10 +726,9 @@
       font-weight: 600;
       cursor: pointer;
       transition: transform 0.2s, box-shadow 0.2s;
-      margin: 5px; /* Add a small margin */
     }
 
-    #showMoreBtn:hover, #showLessBtn:hover {
+    #showMoreBtn:hover {
       transform: scale(1.05);
       box-shadow: 0 4px 10px rgba(250, 93, 30, 0.4);
     }
@@ -838,29 +811,6 @@
       object-fit: cover;
     }
 
-    /* Styles for the floating button */
-    .floating-button {
-      position: fixed;
-      bottom: 20px; /* Distance from the bottom of the viewport */
-      right: 20px; /* Distance from the right of the viewport */
-      z-index: 1000; /* Ensure it's above other content */
-      padding: 12px 20px; /* Adjust padding for visual balance */
-      border-radius: 12px; /* Consistent with other buttons */
-      background: var(--sun-6); /* Same background color as btn-primary */
-      color: #fff; /* White text color */
-      font-weight: 700; /* Bold text */
-      border: none; /* No border */
-      cursor: pointer; /* Indicate it's clickable */
-      box-shadow: 0 8px 22px rgba(122, 28, 23, 0.3); /* Stronger shadow to stand out */
-      transition: background 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
-    }
-
-    .floating-button:hover {
-      background: var(--sun-4);
-      transform: translateY(-3px); /* Slightly more pronounced lift */
-      box-shadow: 0 12px 28px rgba(122, 28, 23, 0.4);
-    }
-
     /* For even more compact mobile view */
     @media (max-width: 480px) {
       .review img {
@@ -868,12 +818,6 @@
         border-radius: 8px;
         margin-top: 4px;
         margin-bottom: 2px;
-      }
-      .floating-button {
-        bottom: 15px;
-        right: 15px;
-        padding: 10px 16px;
-        font-size: 0.9rem;
       }
     }
   </style>
@@ -1164,7 +1108,6 @@
 
         <div class="show-more">
           <button id="showMoreBtn">Ver más reseñas ▼</button>
-          <button id="showLessBtn" style="display:none;">Ver menos reseñas ▲</button>
         </div>
       </section>
 
@@ -1299,9 +1242,6 @@
       </div>
     </footer>
   </div> <!-- End of .wrap -->
-
-  <!-- FLOATING BUTTON -->
-  <button class="floating-button" id="floatingOrderButton">🛒 Pedir ahora</button>
 
   <!-- FOOTER 2: NAVIGATION AND FULL COPYRIGHT -->
   <footer class="footer-nav-copyright">
@@ -1462,7 +1402,6 @@
     let currentIndex = 0;
 
     function updateCarousel() {
-      if (slides.length === 0) return; // Prevent errors if no images
       const slideWidth = slides[0].getBoundingClientRect().width;
       track.style.transform = `translateX(-${currentIndex * slideWidth}px)`;
     }
@@ -1478,39 +1417,28 @@
     });
 
     window.addEventListener('resize', updateCarousel);
-    // Initial update in case images load differently
-    updateCarousel();
-
 
     /* MODAL SCRIPT */
     const modal = document.getElementById("modalFormulario");
-    const abrirFormularioBtn = document.getElementById("abrirFormulario");
-    const floatingOrderButton = document.getElementById("floatingOrderButton"); // New floating button
-    const spanCerrarModal = document.querySelector(".cerrar");
+    const btn = document.getElementById("abrirFormulario");
+    const span = document.querySelector(".cerrar");
 
-    // Function to open the modal
-    function openModal() {
+    btn.onclick = function () {
       modal.style.display = "block";
     }
 
-    // Function to close the modal
-    function closeModal() {
+    span.onclick = function () {
       modal.style.display = "none";
     }
 
-    abrirFormularioBtn.onclick = openModal;
-    floatingOrderButton.onclick = openModal; // Assign openModal to the floating button
-    spanCerrarModal.onclick = closeModal;
-
     window.onclick = function (event) {
       if (event.target === modal) {
-        closeModal();
+        modal.style.display = "none";
       }
     }
 
     /* Smooth scroll when clicking "Ver detalles" */
-    document.getElementById("detalles").addEventListener("click", (e) => {
-      e.preventDefault(); // Prevent default anchor jump
+    document.getElementById("detalles").addEventListener("click", () => {
       const section = document.getElementById("detalles");
       if (section) {
         section.scrollIntoView({
@@ -1527,37 +1455,17 @@
         let count = parseInt(span.textContent);
         span.textContent = count + 1;
         btn.style.color = "#22c55e"; // Trust green
-        btn.disabled = true; // Disable after one click to prevent multiple likes
       });
     });
 
-    /* "Show more/less reviews" buttons */
+    /* "Show more reviews" button */
     const showMoreBtn = document.getElementById("showMoreBtn");
-    const showLessBtn = document.getElementById("showLessBtn"); // New button
     const hiddenReviews = document.querySelectorAll(".review.hidden");
-    const initialVisibleReviews = 3; // Number of reviews initially visible
-
-    // Hide "Ver menos" button initially if there are no hidden reviews to show
-    if (hiddenReviews.length === 0) {
-        showMoreBtn.style.display = 'none';
-    }
-
 
     showMoreBtn.addEventListener("click", () => {
       hiddenReviews.forEach(r => r.classList.remove("hidden"));
       showMoreBtn.style.display = "none";
-      showLessBtn.style.display = "inline-block"; // Show "Ver menos" button
     });
-
-    showLessBtn.addEventListener("click", () => {
-      // Re-hide reviews beyond the initial visible count
-      Array.from(document.querySelectorAll(".review")).slice(initialVisibleReviews).forEach(r => {
-        r.classList.add("hidden");
-      });
-      showMoreBtn.style.display = "inline-block"; // Show "Ver más" button
-      showLessBtn.style.display = "none"; // Hide "Ver menos" button
-    });
-
   </script>
 
 </body>
