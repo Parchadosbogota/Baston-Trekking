@@ -886,7 +886,212 @@
   25% { transform: translateX(-4px) rotate(-2deg); box-shadow: 0 0 20px rgba(255, 255, 255, 0.5); }
   75% { transform: translateX(4px) rotate(2deg); box-shadow: 0 0 20px rgba(255, 255, 255, 0.5); }
 }
+
+/* --- ESTILOS PARA EL MÓDULO DE COMPRA (INTEGRADO CON TU TEMA) --- */
+
+/* Contenedor principal del módulo */
+.modulo-compra {
+  font-family: "Poppins", system-ui, sans-serif;
+  background-color: var(--bg, #ffffff);
+  border-radius: var(--card-radius, 16px); /* Usando tu variable de radio */
+  padding: 24px;
+  max-width: 500px;
+  margin: 20px auto;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+  border: 1px solid #f0f0f0;
+}
+
+.producto-info h2 {
+  font-size: 1.5rem;
+  margin: 0 0 8px;
+  color: var(--text, #111);
+}
+
+.precios {
+  display: flex;
+  align-items: baseline;
+  gap: 12px;
+  margin-bottom: 10px;
+}
+
+.precio-base {
+  text-decoration: line-through;
+  color: var(--muted, #999);
+  font-size: 1rem;
+}
+
+.precio-promo {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: var(--accent, #FA5D1E); /* Usando tu variable de acento */
+}
+
+/* Estilos del formulario */
+.formulario-compra {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  border-bottom: 1px solid #eee;
+  padding-bottom: 1px;
+  margin-bottom: 1px;
+}
+
+.campo-form {
+  display: flex;
+  flex-direction: column;
+}
+
+.campo-form label {
+  font-weight: 600;
+  margin-bottom: 8px;
+  font-size: 0.9rem;
+  color: var(--text, #333);
+}
+
+.input-estilizado {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  font-size: 1rem;
+  box-sizing: border-box;
+  transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+.input-estilizado:focus {
+  outline: none;
+  border-color: var(--accent, #FA5D1E);
+  box-shadow: 0 0 0 3px rgba(250, 93, 30, 0.15); /* Sombra con tu color de acento */
+}
+
+.campo-codigo {
+  display: flex;
+  gap: 10px;
+}
+
+.campo-codigo input {
+  flex-grow: 1;
+}
+
+.btn-aplicar {
+  padding: 12px 20px;
+  border: none;
+  background-color: var(--text, #111);
+  color: var(--bg, #fff);
+  font-weight: 600;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.btn-aplicar:hover {
+  background-color: #333;
+}
+
+.mensaje-codigo {
+    font-size: 0.85rem;
+    margin-top: 6px;
+    height: 16px;
+}
+/* Mantenemos un verde universal para "éxito", ya que es un color semántico */
+.mensaje-codigo.valido { color: #00b37d; } 
+/* Usamos tu color de "error/advertencia" para inválido */
+.mensaje-codigo.invalido { color: var(--sun-4, #B03725); } 
+
+
+/* Estilos del resumen de compra */
+.resumen-compra {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.resumen-compra h3 {
+  margin: 0 0 8px;
+  font-size: 1.2rem;
+  border-bottom: 1px solid #eee;
+  padding-bottom: 8px;
+  margin-top: 0;
+}
+
+.linea-resumen, .linea-total {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 1rem;
+}
+
+.linea-resumen span:first-child, .linea-total span:first-child {
+  color: var(--muted, #555);
+}
+.linea-resumen span:last-child, .linea-total span:last-child {
+  font-weight: 600;
+  color: var(--text, #111);
+}
+
+.linea-resumen.descuento span:last-child {
+  color: #00b37d; /* Verde para el descuento */
+}
+
+.linea-total {
+  margin-top: 12px;
+  padding-top: 12px;
+  border-top: 2px solid var(--text, #111);
+}
+
+.linea-total span {
+  font-size: 1.2rem;
+  font-weight: 700;
+}
+
+/* Detalle de ahorro */
+.detalle-ahorro {
+    background-color: #f0fdf4;
+    border: 1px solid #bbf7d0;
+    border-radius: 8px;
+    padding: 16px;
+    margin-top: 16px;
+}
+.detalle-ahorro p { margin: 0 0 10px; font-weight: 600; color: #166534; }
+.detalle-ahorro ul { margin: 0; padding-left: 20px; color: #15803d; font-size: 0.9rem; list-style-type: '✓ '; }
+.detalle-ahorro strong { display: block; margin-top: 12px; text-align: right; color: #166534; }
     
+  /* -- Pega este nuevo estilo al final de tu CSS -- */
+.aviso-promo {
+    font-size: 0.9rem;
+    color: var(--muted, #555);
+    background-color: #fff9f6; /* Un fondo naranja muy sutil */
+    border: 1px solid #ffe8de;   /* Un borde naranja muy claro */
+    padding: 10px 14px;
+    border-radius: 8px;
+    margin: 0;
+    text-align: center;
+}
+
+.aviso-promo strong {
+    color: var(--accent, #FA5D1E); /* Usa el color de acento de tu marca */
+}
+
+/* -- Pega estos nuevos estilos al final de tu CSS -- */
+
+/* 1. Estilos para el CONTENEDOR de los GIFs */
+.media-grid {
+  display: flex; /* ¡La magia de Flexbox para alinear elementos! */
+  gap: 12px;   /* Crea un espacio limpio entre los dos GIFs */
+  margin-top: 12px; /* Un pequeño margen superior para separarlo del contenido de arriba */
+}
+
+/* 2. Modificación para CADA GIF dentro del contenedor */
+.media-gif {
+  flex: 1; /* Le dice a cada GIF que ocupe el 50% del espacio disponible */
+  width: 100%; /* Asegura que el GIF llene su mitad del contenedor */
+  min-width: 0; /* Un truco de Flexbox para evitar que los GIFs se desborden */
+  height: auto;
+  border-radius: var(--card-radius);
+  display: block;
+  object-fit: cover; /* Hace que el GIF llene el espacio sin deformarse, recortando si es necesario */
+}
+
   </style>
 
 </head>
@@ -909,8 +1114,8 @@
         <p class="lead">Bastón Trekking ajustable • Linterna LED • Brújula • Sistema Anti-Shock — perfecto para tus salidas Parchadas.</p>
 
         <div class="price-row">
-          <div class="old-price">$89.000</div>
-          <div class="new-price">$75.650</div>
+          <div class="old-price">$100.000</div>
+          <div class="new-price">$87.524</div>
           <div class="small" style="margin-left:auto">Envío incluido • Stock limitado</div>
         </div>
 
@@ -993,11 +1198,10 @@
           <div style="margin-top:12px" class="small">Precio promocional por lanzamiento: <strong>$76.427</strong> — envío ya incluido.</div>
           <div style="margin-top:12px" class="small">Promoción válida por 25 días.</div>
         </div>
-        <div class="media">
-          <video controls>
-            <source src="img/video.mp4" type="video/mp4">
-            Tu navegador no soporta videos.
-          </video>
+      <!--CÓDIGO CON LOS DOS GIFS -->
+        <div class="media-grid">
+          <img src="img/baston.gif" alt="Animación del bastón de trekking extensible" class="media-gif">
+         <img src="img/baston2.gif" alt="Animación de la linterna LED del bastón" class="media-gif">
         </div>
 
         <div style="margin-top:12px" class="card">
@@ -1182,47 +1386,115 @@
       <!-- FORM -->
       <!-- Blurred background + modal -->
       <div id="modalFormulario" class="modal">
-        <div class="modal-contenido">
-          <span class="cerrar">&times;</span>
-          <div class="right">
-            <div class="specs">
-              <h3>Pedido rápido</h3>
-              <p class="small">Completa tus datos y te confirmamos por WhatsApp. Guardamos tu pedido automáticamente.</p>
+        <!-- INICIO DEL NUEVO CONTENIDO DEL MODAL -->
+<div class="modal-contenido">
+  <span class="cerrar">&times;</span>
 
-              <form id="orderForm">
-                <!-- Product hidden -->
-                <input type="hidden" name="product" value="Bastón Trekking • Parchados">
-                <input type="hidden" name="price" value="76427">
+  <!-- MÓDULO DE CÁLCULO DINÁMICO (Parte 1) -->
+  <section class="modulo-compra">
+    <div class="producto-info">
+      <h2>Bastón Trekking Pro con Linterna</h2>
+      <div class="precios">
+        <span class="precio-base">$100.000</span>
+        <span class="precio-promo" id="precio-unitario-display">$87.524</span>
+      </div>
+      <p class="aviso-promo"><strong>¡Equipa a tu parche!</strong> Desde la segunda unidad el precio baja un 22%.</p>
+    </div>
+    
+    <div class="formulario-compra">
+      <div class="campo-form">
+        <label for="cantidad">Cantidad:</label>
+        <input type="number" id="cantidad" value="1" min="1" class="input-estilizado">
+      </div>
 
-                <div class="row">
-                  <input type="text" name="firstName" placeholder="Nombre" required>
-                  <input type="text" name="lastName" placeholder="Apellido" required>
-                </div>
+      <div class="campo-form">
+        <label for="codigoDescuento">Código de Descuento:</label>
+        <div class="campo-codigo">
+          <input type="text" id="codigoDescuento" placeholder="Ej: PARCHADOS123" class="input-estilizado">
+          <button id="aplicarCodigoBtn" class="btn-aplicar">Aplicar</button>
+        </div>
+        <p id="mensajeCodigo" class="mensaje-codigo"></p>
+      </div>
+    </div>
 
-                <label class="small">Teléfono</label>
-                <div class="row phone-wrap">
-                  <select id="country" name="country" required class="flag-select">
-                    <option value="+57" data-flag="🇨🇴">🇨🇴 Colombia (+57)</option>
-                    <option value="+52" data-flag="🇲🇽">🇲🇽 México (+52)</option>
-                    <option value="+51" data-flag="🇵🇪">🇵🇪 Perú (+51)</option>
-                  </select>
-                  <input type="text" name="phone" placeholder="Ej: 3123456789" required>
-                </div>
+    <div class="resumen-compra" id="resumenCompra">
+      <h3>Resumen de tu Pedido</h3>
+      <div class="linea-resumen">
+        <span>Producto</span>
+        <span id="detalleUnidades">1 unidad</span>
+      </div>
+      <div class="linea-resumen" id="lineaSubtotal">
+        <span>Subtotal</span>
+        <span id="valorSubtotal">$87.524</span>
+      </div>
+      <div class="linea-resumen descuento" id="lineaDescuento" style="display: none;">
+        <span>Descuento Cupón (PARCHE17)</span>
+        <span id="valorDescuento">-$0</span>
+      </div>
+      <div class="linea-total">
+        <span>Total a Pagar</span>
+        <span id="totalCompra">$87.524</span>
+      </div>
+      <div class="detalle-ahorro" id="cajaAhorro" style="display: none;">
+          <p>🎉 ¡Estás ahorrando!</p>
+          <ul>
+              <li id="ahorroUnidadesAdicionales" style="display: none;"></li>
+              <li id="ahorroPorCodigo" style="display: none;"></li>
+          </ul>
+          <strong>Ahorro Total: <span id="ahorroTotalGeneral">$0</span></strong>
+      </div>
+    </div>
+  </section>
 
-                <div class="row">
-                  <input type="email" name="email" placeholder="Correo electrónico" required>
-                </div>
+  <!-- FORMULARIO DE ENVÍO (Parte 2) -->
+  <div class="specs" style="margin-top: 20px;">
+    <h3>Completa tu envío</h3>
+    <p class="small">Revisa tu pedido arriba y completa tus datos para finalizar la compra.</p>
 
-                <div class="row">
-                  <input type="text" name="docType" placeholder="Tipo de documento (C.C.)" required>
-                  <input type="text" name="docNumber" placeholder="Número de documento" required>
-                </div>
+    <form id="orderForm">
+      <!-- 
+        CAMPOS OCULTOS: LA CLAVE DE LA INTEGRACIÓN
+        Estos campos no son visibles para el usuario, pero guardan los datos del
+        resumen dinámico para ser enviados a tu hoja de cálculo.
+      -->
+      <input type="hidden" id="hiddenProduct" name="product" value="Bastón Trekking • Parchados">
+      <input type="hidden" id="hiddenCantidad" name="cantidad" value="1">
+      <input type="hidden" id="hiddenSubtotal" name="subtotal" value="">
+      <input type="hidden" id="hiddenDescuento" name="descuento" value="">
+      <input type="hidden" id="hiddenTotal" name="totalFinal" value="">
+      <input type="hidden" id="hiddenCodigo" name="codigoUsado" value="N/A">
 
-                <!-- DEPARTMENTS -->
-                <div class="row">
-                  <select id="department" name="department" required>
-                    <option value="">Selecciona departamento</option>
-                    <!-- Full list of Colombian departments -->
+      <!-- Campos visibles del formulario de envío (tu código original) -->
+      <div class="row">
+        <input type="text" name="firstName" placeholder="Nombre" required>
+        <input type="text" name="lastName" placeholder="Apellido" required>
+      </div>
+      <label class="small">Teléfono</label>
+      <div class="row phone-wrap">
+        <select id="country" name="country" required class="flag-select">
+          <option value="+57" data-flag="🇨🇴">🇨🇴 Colombia (+57)</option>
+          <option value="+52" data-flag="🇲🇽">🇲🇽 México (+52)</option>
+          <option value="+51" data-flag="🇵🇪">🇵🇪 Perú (+51)</option>
+        </select>
+        <input type="text" name="phone" placeholder="Ej: 3123456789" required>
+      </div>
+      <div class="row">
+        <input type="email" name="email" placeholder="Correo electrónico" required>
+      </div>
+      <div class="row">
+          <select name="docType" required>
+            <option value="" disabled selected>Tipo de documento</option>
+            <option value="CC">Cédula de Ciudadanía</option>
+            <option value="CE">Cédula de Extranjería</option>
+            <option value="NIT">NIT (Empresa)</option>
+            <option value="Pasaporte">Pasaporte</option>
+            <option value="PPT">Permiso por Protección Temporal (PPT)</option>
+          </select>
+        <input type="text" name="docNumber" placeholder="Número de documento" required>
+      </div>
+      <div class="row">
+        <select id="department" name="department" required>
+          <option value="">Selecciona departamento</option>
                     <option value="Amazonas">Amazonas</option>
                     <option value="Antioquia">Antioquia</option>
                     <option value="Arauca">Arauca</option>
@@ -1256,44 +1528,36 @@
                     <option value="Valle del Cauca">Valle del Cauca</option>
                     <option value="Vaupés">Vaupés</option>
                     <option value="Vichada">Vichada</option>
-                  </select>
-                </div>
-
-                <div class="row">
-                  <select id="city" name="city" required>
-                    <option value="">Selecciona ciudad</option>
-                  </select>
-                </div>
-
-                <div class="row">
-                  <input type="text" name="address" placeholder="Dirección (calle, #, barrio)" required>
-                </div>
-
-                <div class="row">
-                  <input type="text" name="addressExtra" placeholder="Casa, apartamento, piso (info adicional)">
-                </div>
-
-                <div class="row">
-                  <label class="small">Método de pago</label>
-                </div>
-                <div class="row" style="margin-bottom:12px">
-                  <label style="display:flex;gap:8px;align-items:center"><input type="radio" name="payment" value="Contra entrega" checked> Contra entrega</label>
-                  <label style="display:flex;gap:8px;align-items:center"><input type="radio" name="payment" value="Pago anticipado"> Pago anticipado</label>
-                </div>
-
-                <div class="row">
-                  <textarea name="notes" placeholder="Información adicional (opcional)" rows="3"></textarea>
-                </div>
-
-                <div class="row submit-wrap">
-                  <button type="submit" class="btn-submit">Enviar pedido</button>
-                  <div class="small">Te confirmamos por WhatsApp en menos de 24h</div>
-                </div>
-
-                <div id="formMsg" class="small" style="margin-top:8px;color:green;display:none"></div>
-              </form>
-            </div>
-          </div>
+        </select>
+      </div>
+      <div class="row">
+        <select id="city" name="city" required>
+          <option value="">Selecciona ciudad</option>
+        </select>
+      </div>
+      <div class="row">
+        <input type="text" name="address" placeholder="Dirección (calle, #, barrio)" required>
+      </div>
+      <div class="row">
+        <input type="text" name="addressExtra" placeholder="Casa, apartamento, piso (info adicional)">
+      </div>
+      <div class="row"><label class="small">Método de pago</label></div>
+      <div class="row" style="margin-bottom:12px">
+        <label style="display:flex;gap:8px;align-items:center"><input type="radio" name="payment" value="Contra entrega" checked> Contra entrega</label>
+        <label style="display:flex;gap:8px;align-items:center"><input type="radio" name="payment" value="Pago anticipado"> Pago anticipado</label>
+      </div>
+      <div class="row">
+        <textarea name="notes" placeholder="Información adicional (opcional)" rows="3"></textarea>
+      </div>
+      <div class="row submit-wrap">
+        <button type="submit" class="btn-submit">Enviar pedido</button>
+        <div class="small">Te confirmamos por WhatsApp en menos de 24h</div>
+      </div>
+      <div id="formMsg" class="small" style="margin-top:8px;color:green;display:none"></div>
+    </form>
+  </div>
+</div>
+<!-- FIN DEL NUEVO CONTENIDO DEL MODAL -->
         </div>
       </div>
     </section>
@@ -1421,6 +1685,142 @@
         });
       }
     });
+
+// --- INICIO DEL CÓDIGO PARA EL MÓDULO DE COMPRA DINÁMICO ---
+document.addEventListener('DOMContentLoaded', () => {
+
+  // --- CONFIGURACIÓN DE PRECIOS Y DESCUENTOS ---
+  const PRECIO_PROMO_UNIDAD_1 = 87524;
+  const PRECIO_UNIDADES_ADICIONALES = 67800;
+  const CODIGO_DESCUENTO_VALIDO = "PARCHE17";
+  const PRECIO_CON_DESCUENTO_UNIDAD_1 = 72000;
+
+  // --- SELECCIÓN DE ELEMENTOS DEL DOM ---
+  const cantidadInput = document.getElementById('cantidad');
+  const codigoInput = document.getElementById('codigoDescuento');
+  const aplicarCodigoBtn = document.getElementById('aplicarCodigoBtn');
+  const mensajeCodigoEl = document.getElementById('mensajeCodigo');
+  
+  const detalleUnidadesEl = document.getElementById('detalleUnidades');
+  const valorSubtotalEl = document.getElementById('valorSubtotal');
+  const lineaDescuentoEl = document.getElementById('lineaDescuento');
+  const valorDescuentoEl = document.getElementById('valorDescuento');
+  const totalCompraEl = document.getElementById('totalCompra');
+  
+  const cajaAhorroEl = document.getElementById('cajaAhorro');
+  const ahorroUnidadesEl = document.getElementById('ahorroUnidadesAdicionales');
+  const ahorroCodigoEl = document.getElementById('ahorroPorCodigo');
+  const ahorroTotalGeneralEl = document.getElementById('ahorroTotalGeneral');
+
+  const formatearMoneda = (valor) => {
+    return new Intl.NumberFormat('es-CO', {
+      style: 'currency',
+      currency: 'COP',
+      minimumFractionDigits: 0,
+      maximumFractionDigits: 0
+    }).format(valor);
+  };
+
+  const calcularYActualizarResumen = () => {
+    const cantidad = parseInt(cantidadInput.value) || 1;
+    const codigoIngresado = codigoInput.value.trim().toUpperCase();
+
+    let subtotal = 0;
+    let descuentoPorCodigo = 0;
+    let ahorroPorUnidades = 0;
+    
+    const esCodigoValido = codigoIngresado === CODIGO_DESCUENTO_VALIDO;
+    if (esCodigoValido) {
+      descuentoPorCodigo = PRECIO_PROMO_UNIDAD_1 - PRECIO_CON_DESCUENTO_UNIDAD_1;
+    }
+
+    if (cantidad === 1) {
+      subtotal = PRECIO_PROMO_UNIDAD_1;
+    } else {
+      const unidadesAdicionales = cantidad - 1;
+      subtotal = PRECIO_PROMO_UNIDAD_1 + (unidadesAdicionales * PRECIO_UNIDADES_ADICIONALES);
+      ahorroPorUnidades = unidadesAdicionales * (PRECIO_PROMO_UNIDAD_1 - PRECIO_UNIDADES_ADICIONALES);
+    }
+    
+    const totalFinal = subtotal - descuentoPorCodigo;
+    const ahorroTotal = ahorroPorUnidades + descuentoPorCodigo;
+
+    detalleUnidadesEl.textContent = `${cantidad} ${cantidad > 1 ? 'unidades' : 'unidad'}`;
+    valorSubtotalEl.textContent = formatearMoneda(subtotal);
+    totalCompraEl.textContent = formatearMoneda(totalFinal);
+    
+    if (esCodigoValido) {
+        lineaDescuentoEl.style.display = 'flex';
+        valorDescuentoEl.textContent = `-${formatearMoneda(descuentoPorCodigo)}`;
+    } else {
+        lineaDescuentoEl.style.display = 'none';
+    }
+
+    if (ahorroTotal > 0) {
+        cajaAhorroEl.style.display = 'block';
+        ahorroTotalGeneralEl.textContent = formatearMoneda(ahorroTotal);
+        
+        if (ahorroPorUnidades > 0) {
+            ahorroUnidadesEl.style.display = 'list-item';
+            ahorroUnidadesEl.textContent = `Por 2da unidad o más: ${formatearMoneda(ahorroPorUnidades)}`;
+        } else {
+            ahorroUnidadesEl.style.display = 'none';
+        }
+        
+        if (descuentoPorCodigo > 0) {
+            ahorroCodigoEl.style.display = 'list-item';
+            ahorroCodigoEl.textContent = `Por cupón "${CODIGO_DESCUENTO_VALIDO}": ${formatearMoneda(descuentoPorCodigo)}`;
+        } else {
+            ahorroCodigoEl.style.display = 'none';
+        }
+    } else {
+        cajaAhorroEl.style.display = 'none';
+    }
+
+    // --- ¡AQUÍ ESTÁ LA MAGIA DE LA INTEGRACIÓN! ---
+    // Actualizamos los campos ocultos del formulario de envío.
+    document.getElementById('hiddenCantidad').value = cantidad;
+    document.getElementById('hiddenSubtotal').value = formatearMoneda(subtotal);
+    document.getElementById('hiddenDescuento').value = formatearMoneda(descuentoPorCodigo);
+    document.getElementById('hiddenTotal').value = formatearMoneda(totalFinal);
+    document.getElementById('hiddenCodigo').value = esCodigoValido ? codigoIngresado : 'N/A';
+  };
+  
+  const manejarMensajeCodigo = () => {
+      const codigoIngresado = codigoInput.value.trim();
+      if (codigoIngresado === "") {
+          mensajeCodigoEl.textContent = "";
+          mensajeCodigoEl.className = 'mensaje-codigo';
+          return;
+      }
+      
+      if (codigoIngresado.toUpperCase() === CODIGO_DESCUENTO_VALIDO) {
+          mensajeCodigoEl.textContent = "✓ Código aplicado correctamente.";
+          mensajeCodigoEl.className = 'mensaje-codigo valido';
+      } else {
+          mensajeCodigoEl.textContent = "✗ Código no válido.";
+          mensajeCodigoEl.className = 'mensaje-codigo invalido';
+      }
+  };
+
+  cantidadInput.addEventListener('input', calcularYActualizarResumen);
+  aplicarCodigoBtn.addEventListener('click', (e) => {
+      e.preventDefault();
+      manejarMensajeCodigo();
+      calcularYActualizarResumen();
+  });
+  
+  codigoInput.addEventListener('keydown', (e) => {
+      if (e.key === 'Enter') {
+          e.preventDefault();
+          aplicarCodigoBtn.click();
+      }
+  });
+
+  // Llamada inicial cuando se abre el modal
+  calcularYActualizarResumen();
+});
+// --- FIN DEL CÓDIGO PARA EL MÓDULO DE COMPRA DINÁMICO ---
 
     /* FORM SUBMIT -> send to Google Apps Script */
     const form = document.getElementById('orderForm');
