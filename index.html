@@ -1338,7 +1338,7 @@
      * REPLACE SCRIPT_URL constant with your Web App (Google Apps Script) URL
      * The Web App must accept POST and save to the sheet.
      * ============================================ */
-    const SCRIPT_URL = "REEMPLAZAR_POR_URL_DE_TU_WEBAPP";
+    const SCRIPT_URL = "https://script.google.com/macros/s/AKfycbzw18i7E0XzdZ4D_rLCqZA1_dKMlRa2OkpVvu9_6yaMLd11Dlx2egWSVvZRaqeB0y4RSw/exec";
     /* ============================================ */
 
     /* Countdown (25 days from first user load)
@@ -1426,7 +1426,7 @@
     const form = document.getElementById('orderForm');
     form.addEventListener('submit', async (ev) => {
       ev.preventDefault();
-      if (!SCRIPT_URL || SCRIPT_URL.includes("REEMPLAZAR_POR_URL")) {
+      if (!SCRIPT_URL || SCRIPT_URL.includes("REEMPLAZAR_POR_URL_DE_TU_WEBAPP")) {
         alert("Aun no configuraste la variable SCRIPT_URL en el código. Sigue las instrucciones para obtener la URL del Web App.");
         return;
       }
