@@ -1338,7 +1338,7 @@
      * REPLACE SCRIPT_URL constant with your Web App (Google Apps Script) URL
      * The Web App must accept POST and save to the sheet.
      * ============================================ */
-    const SCRIPT_URL = "https://script.google.com/macros/s/AKfycbzuVvPdHX68TP7j0i_mcVupwxX6G0f3p4cTwerWpJbL85EaYH3-e1IZ7K_qOd844c33yA/exec";
+    const SCRIPT_URL = "https://script.google.com/macros/s/AKfycbyn8swynLjb_TBL4_YID3ZY_2rIhG1LDHCpFck2DoqwFaRBXL9dY5-rLDhw7ZAqU8r6Nw/exec";
     /* ============================================ */
 
     /* Countdown (25 days from first user load)
@@ -1431,32 +1431,33 @@
         return;
       }
 
+      // 1. Usaremos el objeto FormData directamente, que ya está creado.
       const data = new FormData(form);
-      // Build object
-      const payload = {};
-      data.forEach((v, k) => payload[k] = v);
 
-      // Add timestamp
-      payload.timestamp = new Date().toISOString();
+      // 2. Añadimos el timestamp manualmente al FormData.
+      data.append('timestamp', new Date().toISOString());
 
       try {
         const res = await fetch(SCRIPT_URL, {
           method: 'POST',
-          mode: 'cors',
-          headers: {
-            'Content-Type': 'application/json'
-          },
-          body: JSON.stringify(payload)
+          // 3. ¡ELIMINAMOS LOS HEADERS! Fetch pondrá los correctos automáticamente para FormData.
+          // 4. ¡ELIMINAMOS EL JSON.stringify! Enviamos el objeto 'data' directamente.
+          body: data
         });
-        const json = await res.json();
-        if (json.result && json.result === 'success') {
+        
+        // Google Apps Script a veces devuelve una respuesta que no es JSON puro al redirigir,
+        // así que la procesaremos como texto para evitar errores.
+        const responseText = await res.text();
+        
+        // Asumimos éxito si la respuesta contiene "success".
+        if (responseText.includes('success')) {
           document.getElementById('formMsg').style.display = 'block';
           document.getElementById('formMsg').innerText = "¡Pedido registrado! En breve te confirmamos por WhatsApp.";
-          // Clear or keep? Keep data for confirmation
           form.reset();
           setTimeout(() => document.getElementById('formMsg').style.display = 'none', 7000);
         } else {
-          throw new Error('Error saving');
+          // Si no, lanzamos un error con la respuesta que recibimos.
+          throw new Error('Error en la respuesta del script: ' + responseText);
         }
       } catch (err) {
         console.error(err);
